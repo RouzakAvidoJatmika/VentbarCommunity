@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventbar - Event Jepang Terbaik di Jabodetabek</title>
+    <link rel="icon" type="image/png" href="images/Ventbar Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/Ventbar Logo.png" alt="Ventbar Logo" class="logo-img">
+                <span class="logo-text">Ventbar</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Beranda</a>
+                <a href="#events" class="nav-link">Event</a>
+                <a href="#rental" class="nav-link">Rental Custom</a>
+                <a href="#schedule" class="nav-link">Jadwal</a>
+                <a href="#location" class="nav-link">Lokasi</a>
+                <a href="#route" class="nav-link">Rute</a>
+                <a href="#feedback" class="nav-link">Feedback</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Temukan Event <span class="highlight">Jepang</span> Terbaik
+                        <br>di <span class="highlight">Jabodetabek</span>
+                    </h1>
+                    <p class="hero-description">
+                        Bergabunglah dengan komunitas pecinta budaya Jepang dan nikmati berbagai event menarik, 
+                        dari festival tradisional hingga konvensi modern yang tak terlupakan.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('events')">
+                            Lihat Event
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('rental')">
+                            Rental Custom
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/maskot.jpg" alt="Ventbar Maskot" class="maskot-img floating">
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Event Mendatang</h2>
+                <p class="section-subtitle">Jangan lewatkan event-event menarik yang akan datang</p>
+            </div>
+            <div class="events-grid">
+                <div class="event-card" data-aos="fade-up">
+                    <div class="event-image">
+                        <img src="https://images.pexels.com/photos/2070033/pexels-photo-2070033.jpeg" alt="Matsuri Festival">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Des</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Matsuri Festival Jakarta</h3>
+                        <p class="event-location">📍 Senayan City, Jakarta</p>
+                        <p class="event-description">Festival tradisional Jepang dengan berbagai pertunjukan dan kuliner khas.</p>
+                        <button class="btn btn-outline" onclick="showEventDetails('matsuri')">Detail Event</button>
+                    </div>
+                </div>
+
+                <div class="event-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="event-image">
+                        <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg" alt="Anime Convention">
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">Des</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Anime Convention Bogor</h3>
+                        <p class="event-location">📍 Botani Square, Bogor</p>
+                        <p class="event-description">Konvensi anime terbesar dengan cosplay competition dan merchandise.</p>
+                        <button class="btn btn-outline" onclick="showEventDetails('anime')">Detail Event</button>
+                    </div>
+                </div>
+
+                <div class="event-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-image">
+                        <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg" alt="J-Pop Concert">
+                        <div class="event-date">
+                            <span class="day">28</span>
+                            <span class="month">Des</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">J-Pop Night Tangerang</h3>
+                        <p class="event-location">📍 AEON Mall, Tangerang</p>
+                        <p class="event-description">Malam musik J-Pop dengan artis lokal dan internasional.</p>
+                        <button class="btn btn-outline" onclick="showEventDetails('jpop')">Detail Event</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Custom Section -->
+    <section id="rental" class="rental">
+        <div class="container">
+            <div class="rental-content">
+                <div class="rental-text">
+                    <h2 class="section-title">Rental Custom Kostum</h2>
+                    <p class="section-description">
+                        Wujudkan karakter impian Anda dengan layanan rental kostum custom berkualitas tinggi. 
+                        Dari cosplay anime hingga kimono tradisional, kami menyediakan berbagai pilihan kostum 
+                        yang dapat disesuaikan dengan kebutuhan Anda.
+                    </p>
+                    <div class="rental-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">🎭</div>
+                            <div class="feature-text">
+                                <h4>Kostum Berkualitas</h4>
+                                <p>Material premium dan detail yang sempurna</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✂️</div>
+                            <div class="feature-text">
+                                <h4>Custom Fitting</h4>
+                                <p>Disesuaikan dengan ukuran tubuh Anda</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🚚</div>
+                            <div class="feature-text">
+                                <h4>Delivery Service</h4>
+                                <p>Antar jemput gratis area Jabodetabek</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="openRentalForm()">Pesan Sekarang</button>
+                </div>
+                <div class="rental-image">
+                    <img src="images/maskot 2.jpg" alt="Custom Costume" class="costume-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Jadwal Event</h2>
+                <p class="section-subtitle">Lihat jadwal lengkap event-event mendatang</p>
+            </div>
+            <div class="schedule-container">
+                <div class="schedule-tabs">
+                    <button class="tab-btn active" onclick="showSchedule('december')">Desember</button>
+                    <button class="tab-btn" onclick="showSchedule('january')">Januari</button>
+                    <button class="tab-btn" onclick="showSchedule('february')">Februari</button>
+                </div>
+                <div class="schedule-content" id="schedule-content">
+                    <div class="schedule-item">
+                        <div class="schedule-date">
+                            <span class="date-num">15</span>
+                            <span class="date-month">Des</span>
+                        </div>
+                        <div class="schedule-info">
+                            <h4>Matsuri Festival Jakarta</h4>
+                            <p>📍 Senayan City | ⏰ 10:00 - 22:00</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-date">
+                            <span class="date-num">22</span>
+                            <span class="date-month">Des</span>
+                        </div>
+                        <div class="schedule-info">
+                            <h4>Anime Convention Bogor</h4>
+                            <p>📍 Botani Square | ⏰ 09:00 - 21:00</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-date">
+                            <span class="date-num">28</span>
+                            <span class="date-month">Des</span>
+                        </div>
+                        <div class="schedule-info">
+                            <h4>J-Pop Night Tangerang</h4>
+                            <p>📍 AEON Mall | ⏰ 19:00 - 23:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lokasi Event</h2>
+                <p class="section-subtitle">Temukan lokasi event terdekat dari Anda</p>
+            </div>
+            <div class="location-grid">
+                <div class="location-card">
+                    <div class="location-icon">🏢</div>
+                    <h3>Jakarta</h3>
+                    <p>Senayan City, Grand Indonesia, Plaza Indonesia</p>
+                    <button class="btn btn-outline" onclick="showRoute('jakarta')">Lihat Rute</button>
+                </div>
+                <div class="location-card">
+                    <div class="location-icon">🌳</div>
+                    <h3>Bogor</h3>
+                    <p>Botani Square, Bogor Trade Mall, IPB Convention Center</p>
+                    <button class="btn btn-outline" onclick="showRoute('bogor')">Lihat Rute</button>
+                </div>
+                <div class="location-card">
+                    <div class="location-icon">🏭</div>
+                    <h3>Tangerang</h3>
+                    <p>AEON Mall, Summarecon Mall, Living World</p>
+                    <button class="btn btn-outline" onclick="showRoute('tangerang')">Lihat Rute</button>
+                </div>
+                <div class="location-card">
+                    <div class="location-icon">🏘️</div>
+                    <h3>Depok</h3>
+                    <p>Depok Town Square, Margo City, ITC Depok</p>
+                    <button class="btn btn-outline" onclick="showRoute('depok')">Lihat Rute</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Route Section -->
+    <section id="route" class="route">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Panduan Rute</h2>
+                <p class="section-subtitle">Cara termudah menuju lokasi event</p>
+            </div>
+            <div class="route-container">
+                <div class="route-tabs">
+                    <button class="route-tab active" onclick="showRouteInfo('car')">🚗 Mobil</button>
+                    <button class="route-tab" onclick="showRouteInfo('train')">🚊 KRL</button>
+                    <button class="route-tab" onclick="showRouteInfo('bus')">🚌 Bus</button>
+                </div>
+                <div class="route-content" id="route-content">
+                    <div class="route-info">
+                        <h4>Rute dengan Mobil</h4>
+                        <ul>
+                            <li>Dari Jakarta: Tol Dalam Kota → Exit Senayan</li>
+                            <li>Dari Bogor: Tol Jagorawi → Tol Dalam Kota</li>
+                            <li>Dari Tangerang: Tol Jakarta-Tangerang → Tol Dalam Kota</li>
+                            <li>Parkir tersedia di basement mall</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="feedback">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Feedback & Testimoni</h2>
+                <p class="section-subtitle">Apa kata mereka tentang event kami</p>
+            </div>
+            <div class="feedback-container">
+                <div class="testimonials">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <p>"Event yang luar biasa! Organisasi yang rapi dan banyak aktivitas menarik. Pasti akan datang lagi!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Sarah Tanaka</h4>
+                                    <span>Cosplayer Jakarta</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Rental kostumnya berkualitas tinggi dan pelayanannya sangat memuaskan. Recommended banget!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Riko Yamamoto</h4>
+                                    <span>Anime Enthusiast</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback-form">
+                    <h3>Berikan Feedback Anda</h3>
+                    <form id="feedbackForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="rating" required>
+                                <option value="">Pilih Rating</option>
+                                <option value="5">⭐⭐⭐⭐⭐ Sangat Puas</option>
+                                <option value="4">⭐⭐⭐⭐ Puas</option>
+                                <option value="3">⭐⭐⭐ Cukup</option>
+                                <option value="2">⭐⭐ Kurang</option>
+                                <option value="1">⭐ Sangat Kurang</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Tulis feedback Anda..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/Ventbar Logo.png" alt="Ventbar Logo">
+                        <span>Ventbar Community</span>
+                    </div>
+                    <p>Menghubungkan pecinta budaya Jepang di seluruh Jabodetabek melalui event-event berkualitas.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📺</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#events">Event</a></li>
+                        <li><a href="#rental">Rental Custom</a></li>
+                        <li><a href="#schedule">Jadwal</a></li>
+                        <li><a href="#location">Lokasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>📧 instagram.com/ventbarcomm</li>
+                        <li>📱 +62 813-9845-3431</li>
+                        <li>📍 Indonesia</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Dapatkan update event terbaru</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Email Anda">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ventbar. All rights reserved. | ventbarcomm.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('eventModal')">&times;</span>
+            <div id="eventModalContent"></div>
+        </div>
+    </div>
+
+    <div id="rentalModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('rentalModal')">&times;</span>
+            <div class="rental-form-container">
+                <h3>Form Rental Kostum</h3>
+                <form id="rentalForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Nomor WhatsApp" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Pilih Jenis Kostum</option>
+                            <option value="anime">Kostum Anime</option>
+                            <option value="kimono">Kimono Tradisional</option>
+                            <option value="yukata">Yukata</option>
+                            <option value="custom">Custom Design</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" placeholder="Tanggal Sewa" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Deskripsi kostum yang diinginkan..." rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim Permintaan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
